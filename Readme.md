@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Наталья Мельничук](https://up.htmlacademy.ru/adaptive/20/user/1490019).
-* Наставник: `Неизвестно`.
+* Студент: [Наталья Мельничук](https://htmlacademy.ru/profile/id1490019).
+* Наставник: [Владислав Кривокора](https://htmlacademy.ru/profile/krivokora).
 
 ---
 
