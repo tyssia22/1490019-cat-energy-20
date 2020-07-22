@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> 
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -165,59 +168,46 @@
               <a class="button">Заказать</a>
           </li>
           <li class="catalog__item add-item"></section>
-            <button class="add-item__button button" type="button">Показать еще 100500 товаров</button>
+            <p class="add-item_show"> Показать еще 100500 товаров </p>
             <p class="add-item_description">На самом деле вкусов гораздо больше!</p>
-            <button class="button" type="button">Показать все</button>
+            <button class="add-item__button-all" type="button">Показать все</button>
         </li>
       </ul>
     </div>
     <section class="additional-goods">
-      <h2>Дополнительные товары</h2>
-      <ul>
-        <li>
+      <h2 class="additional-goods__title">Дополнительные товары</h2>
+      <ul class="additional-goods__list">
+        <li class="additional-goods__item">
           <h3>Сахарозаменитель</h3>
-          <table>
-            <tr>
-              <td>1 упаковка (100 г)</td>
-              <td>200 р</td>
-            </tr>
-          </table>
-          <a href="">Заказать</a>
+          <span>1 упаковка (100 г)</span>
+          <span>200 р</span>
+          <a class="button" href="">Заказать</a>
         </li>
-        <li>
+        <li class="additional-goods__item">
           <h3>Питьевая вода</h3>
-          <table>
-            <tr>
-              <td>5 литров</td>
-              <td>50 р</td>
-            </tr>
-          </table>
-          <a href="">Заказать</a>
+          <span>5 литров</span>
+          <span>50 р</span>
+          <a class="button" href="">Заказать</a>
         </li>
-        <li>
+        <li class="additional-goods__item">
           <h3>Молоко</h3>
-          <table>
-            <tr>
-              <td>1 литр</td>
-              <td>100 р</td>
-            </tr>
-          </table>
-          <a href="">Заказать</a>
+          <span>1 литр</span>
+          <span>100 р</span>
+          <a class="button" href="">Заказать</a>
         </li>
-        <li>
+        <li class="additional-goods__item">
           <h3>Витамины</h3>
-          <table>
-            <tr>
-              <td>1 упаковка (30 г)</td>
-              <td>300 р</td>
-            </tr>
-          </table>
-          <a href="">Заказать</a>
+          <span>1 упаковка (30 г)</span>
+          <span>300 р</span>
+          <a class="button" href="">Заказать</a>
         </li>
-        <li>
-          <p>Закажите все и получите чехол для кота в подарок!</p>
-        </li>
-      </ul>
+      </ul>  
+    </section>
+    <div class="gift">Закажите все и получите чехол для кота в подарок!</div>
+    <section class="contacts">
+      <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров</h2>
+      <address class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      <img src="https://via.placeholder.com/150x150" width="320" height="362"" alt="Карта">
     </section>
     </main>
     <footer class="page-footer">

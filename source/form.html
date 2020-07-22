@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"> 
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -31,18 +34,20 @@
       <h1>Подбор программы</h1>
       <form action="https://echo.htmlacademy.ru" method="post">
           <p>Заполните анкету и мы подберем программу питания для вашего кота</p>
-          <p>
-            <label for="name">Имя:*</label>
-            <input type="text" name="Имя" id="name" placeholder="Барсик" required>
-          </p>
-          <p>
-            <label for="weight">Вес (кг):*</label>
-            <input type="text" name="Вес" id="weight" placeholder="7" required>
-          </p>
-          <p>
-            <label for="year">Возраст (лет):</label>
-            <input type="text" name="Возраст" id="year" placeholder="7">
-          </p>
+          <ul>
+            <li>
+              <label for="name">Имя:*</label>
+              <input type="text" name="Имя" id="name" placeholder="Барсик" required>
+            </li>
+            <li>
+              <label for="weight">Вес (кг):*</label>
+              <input type="text" name="Вес" id="weight" placeholder="7" required>
+            </li>
+            <li>
+              <label for="year">Возраст (лет):</label>
+              <input type="text" name="Возраст" id="year" placeholder="7">
+            </li>
+          </ul>
           <ul>
             <li>
               <input type="radio" name="Похудение" id="slim" checked>
@@ -58,14 +63,16 @@
             </li>   
           </ul>
           <h2>Контакты владельца</h2>
-          <p>
-            <label for="email">E-mail:*</label>
-            <input type="email" name="Почта" id="email" placeholder="kuklachev@gmail.com" required>
-          </p>
-          <p>
-            <label for="phone">Телефон:*</label>
-            <input type="number" name="Телефон" id="phone" placeholder="8 (960) 900-60-90" required>
-          </p>
+          <ul>
+            <li>
+              <label for="email">E-mail:*</label>
+              <input type="email" name="Почта" id="email" placeholder="kuklachev@gmail.com" required>
+            </li>
+            <li>
+              <label for="phone">Телефон:*</label>
+              <input type="number" name="Телефон" id="phone" placeholder="8 (960) 900-60-90" required>
+            </li>
+          </ul>
           <div>
             <h2>Комментарий</h2>
             <textarea name="comment" id="" cols="30" rows="10">Расскажите обо всех поводках кота</textarea>
@@ -94,7 +101,7 @@
       </form>
       <section class="contacts">
         <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров</h2>
-        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <address class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         <img src="https://via.placeholder.com/150x150" width="320" height="362"" alt="Карта">
       </section>
     </main>
