@@ -1,0 +1,60 @@
+.form{
+    font-family: $fontfamily;
+    text-transform: $uppercase;
+}
+.form__title {
+    @include title;
+    color: $black;
+    text-transform: none;
+}
+
+.form__description, .form-wrapper, .form__list-contact {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.form__list-source, .form__list-target, .form__list-contact, .form_additional-list {
+    @include list;
+}
+
+.form_additional-title {
+    font-size: 24px;
+    line-height: 26px;
+    text-transform: none;
+    color: $black;
+}
+
+input::-webkit-input-placeholder {
+    text-transform: $uppercase;
+}
+input:-moz-placeholder {
+    text-transform: $uppercase;
+}
+textarea::-webkit-input-placeholder {
+    text-transform: $uppercase;
+}
+textarea:-moz-placeholder {
+    text-transform: $uppercase;
+}
+
+@media (min-width: $tablet-width)  {
+    .form__title {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    
+    .form__description, .form-wrapper, .form__list-contact {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .form_additional-title {
+        @include title;
+        text-transform: none;
+        color: $black;
+    }
+}
+@media (min-width: $desktop-width)  {
+    .form__form-wrapper {
+        display: flex;
+    }
+}    

@@ -1,0 +1,46 @@
+.additional-goods__title {
+    font-size: 24px;
+    line-height: 24px;
+    color: $black;
+    font-family: $fontfamily;
+}
+
+.additional-goods__list {
+   @include list;
+}
+.additional-goods__item-title {
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: $uppercase;
+    color: $blacktwo;
+}
+
+.additional-goods__item-volume {
+    line-height: 20px;
+}
+
+.additional-goods__item-price {
+    text-transform: $uppercase;
+}
+.additional-goods__gift {
+    color: $white;
+    background-color: $basicgreen;
+    line-height: 20px;
+}
+
+@media (min-width: $tablet-width)  {
+    .additional-goods__title {
+        @include title;
+    }
+}
+@media (min-width: $desktop-width)  {
+    .additional-goods__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    .additional-goods__item {
+        display: flex;
+        justify-content: space-between; 
+        width: 896px;   
+    }
+}

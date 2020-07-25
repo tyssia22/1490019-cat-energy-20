@@ -1,0 +1,32 @@
+.scheme-work {
+    margin-top: 27px;
+}
+.scheme-work__title {
+    color: $black;
+    font-size: 36px;
+    line-height: 40px;
+    font-family: $fontfamily;
+}
+.scheme-work__list {
+    @include list;
+}
+
+@media (min-width: $tablet-width) {
+    .scheme-work__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .scheme-work__title {
+        font-size: 60px;
+        line-height: 60px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .scheme-work__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,15 @@
+.button {
+    @include link;
+    color: $white;
+    text-transform: $uppercase;
+    background-color: $basicgreen;
+    width: 100%;
+    display: block;
+}
+
+@media (min-width: $tablet-width)  {
+    .button {
+        font-size: 20px;
+        width: 244px;
+    }
+}

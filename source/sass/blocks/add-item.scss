@@ -1,0 +1,51 @@
+.add-item {
+    text-align: center;
+}
+.add-item_show {
+    color: $blackone;
+    text-transform: $uppercase;
+    font-family: $fontfamily;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.add-item_description {
+    font-size: 12px;
+    line-height: 16px;
+}
+.add-item__button {
+    background-color: $grey;
+    text-transform: $uppercase;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+} 
+@media (min-width: $tablet-width)  {
+    .add-item_show {
+        font-size: 20px;
+        line-height: 22px;
+        color: $blackone;
+    }
+    .add-item_description {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .add-item__button {
+        width: 249px;
+    }    
+}
+@media (min-width: $desktop-width)  {
+    .add-item__button {
+        width: 169px;
+    }    
+}
+.gift {
+    color: var(--basic-white);
+    font-size: 16px;
+    line-height: 20px;
+    background-image: url(../img/gift-photo-mobile@1x.jpg);
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 289px;
+    text-align: center;
+}
