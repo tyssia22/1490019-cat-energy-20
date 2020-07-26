@@ -1,0 +1,21 @@
+@mixin title {
+    font-size: 36px;
+    line-height: 36px;
+    font-family: "Oswald", "Arial", sans-serif;
+}
+
+@mixin pseudo {
+    display: $display;
+    position: $pos;
+    content: $content;
+}
+
+@mixin list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin link {
+    text-decoration: none;
+}

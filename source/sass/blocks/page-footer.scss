@@ -1,0 +1,20 @@
+.page-footer {
+    background-color: $grey;
+}
+.social__list {
+    @include list;
+}
+.social__link {
+    @include link;
+}
+
+@media (min-width: $tablet-width) {
+    .page-footer {
+        display: flex;
+        
+    }
+    .copyright__text {
+        line-height: 18px;
+        color: $greydark;
+    }
+}
