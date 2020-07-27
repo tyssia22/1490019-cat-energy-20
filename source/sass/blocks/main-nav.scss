@@ -1,13 +1,35 @@
+.site-list__item {
+  @include list;
+}
+
+.site-list__link {
+  @include link;
+  font-size: 20px;
+  line-height: 20px;
+  font-family: $fontfamily;
+  color: $black;
+  text-transform: $uppercase;
+}
+
 @media (min-width: $tablet-width) {
-    .main-nav__list {
-        display: flex;
-        flex-wrap: wrap;
-        @include list;
-        font-size: 18px;
-        text-transform: $uppercase;
-    }
-    .site-list__link {
-        color: $black;
-        @include link;
-    }
-}    
+  .main-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include list;
+    font-size: 18px;
+    text-transform: $uppercase;
+  }
+
+  .site-list__link {
+    color: $black;
+    @include link;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list__link {
+    color: $white;
+    background-color: $basicgreen;
+  }
+}
