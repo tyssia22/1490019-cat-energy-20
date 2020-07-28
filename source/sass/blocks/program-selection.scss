@@ -1,33 +1,33 @@
 .program-selection {
-    background-image: url(../img/index-background-mobile@1x.jpg);
-    background-repeat: no-repeat;
-    width: 320px;
-    height: 305px;
-    font-family: $fontfamily;
-    text-align: center;
-    color: $white;
+  background-color: $basicgreen;
+  font-family: $fontfamily;
+  text-align: center;
+  color: $white;
 }
 
 .program-selection__title {
-    padding-top: 27px;
-    @include title;
+  padding-top: 27px;
+  @include title;
 }
 
 .program-selection__description {
-    line-height: 14px;
-    text-transform: $uppercase;
+  line-height: 14px;
+  text-transform: $uppercase;
 }
 
 @media (min-width: $tablet-width) {
-    .program-selection__title {
-        font-size: 60px;
-        line-height: 60px;
-        color: $black;
-        text-align: left;
-    }
-    .program-selection__description {
-        color: $black;
-        text-align: left;
-        color: $black;
-    }
+  .program-selection {
+    background-color: $white;
+  }
+
+  .program-selection__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: $black;
+
+  }
+
+  .program-selection__description {
+    color: $black;
+  }
 }

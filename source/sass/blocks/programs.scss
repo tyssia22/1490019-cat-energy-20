@@ -1,40 +1,43 @@
 .programs {
-    padding-top: 22px;
+  margin-top: 22px;
 }
 
 .programs__block {
-    background-color: $grey;
+  background-color: $grey;
 }
 
 .programs__title {
-    font-size: 24px;
-    line-height: 37px;
-    text-transform: $uppercase;
-    color: $black;
-    font-family: $fontfamily ;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: $uppercase;
+  color: $black;
+  font-family: $fontfamily;
 }
 
 .programs__link {
-    font-size: 16px;
-    line-height: 16px;
-    color: $black;
-    @include link;
-    text-transform: $uppercase;
+  font-size: 16px;
+  line-height: 16px;
+  color: $black;
+  @include link;
+  text-transform: $uppercase;
 }
 
 @media (min-width: $desktop-width) {
-    .programs {
-        display: flex;
-        justify-content: space-between;
-    }
-    .programs__block {
-        width: 570px;
-    }
-    .programs__title {
-        @include title;
-    }
-    .programs__link {
-        font-size: 20px;
-        line-height: 30px;
-    }
+  .programs {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programs__block {
+    width: 570px;
+  }
+
+  .programs__title {
+    @include title;
+  }
+
+  .programs__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
