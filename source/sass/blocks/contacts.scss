@@ -1,20 +1,23 @@
 .contacts__wrapper {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  @include wrapper;
 }
+
 .contacts__title {
-    font-size: 16px;
-    color: $blackone;
-    text-transform: $uppercase;
-    font-family: $fontfamily;
+  font-size: 16px;
+  color: $blackone;
+  text-transform: $uppercase;
+  font-family: $fontfamily;
 }
 
 .contacts__address {
-    line-height: 20px;
-    font-style: normal;
+  line-height: 20px;
+  font-style: normal;
 }
 
-@media (min-width: $tablet-width)  {
-    .contacts__title {
-        font-size: 20px;
-    }
+@media (min-width: $tablet-width) {
+  .contacts__title {
+    font-size: 20px;
+  }
 }

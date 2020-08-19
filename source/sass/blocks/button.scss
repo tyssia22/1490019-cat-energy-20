@@ -1,15 +1,27 @@
 .button {
-    @include link;
-    color: $white;
-    text-transform: $uppercase;
-    background-color: $basicgreen;
-    width: 100%;
-    display: block;
-}
+  @include link;
+  color: $white;
+  text-transform: $uppercase;
+  background-color: $basicgreen;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 15px;
+  text-align: center;
 
-@media (min-width: $tablet-width)  {
-    .button {
-        font-size: 20px;
-        width: 244px;
-    }
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+  }
+
+  &:hover {
+    background-color: $basicgreenhover;
+  }
+
+  &:focus {
+    background-color: $basicgreenhover;
+  }
+
+  &:active {
+    color: hsla(360, 100%, 100%, 0.3);
+  }
 }

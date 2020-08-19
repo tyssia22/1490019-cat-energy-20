@@ -1,0 +1,60 @@
+.social-list {
+  @include list;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    padding: 0;
+  }
+
+}
+
+.social-list__item:not(:first-child) {
+  padding-left: 34px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 27px;
+  }
+}
+
+.social-list__link {
+  @include link;
+
+}
+
+.social-list__icon {
+  fill: #666666;
+
+  &:hover {
+    fill: $basicgreen;
+  }
+
+  &:focus {
+    fill: $basicgreen;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    &--vk {
+      width: 30px;
+      height: 22px;
+    }
+
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 28px;
+      height: 33px;
+    }
+  }
+}

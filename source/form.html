@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>HTML Academy: Кэт энерджи</title>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-  <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-</head>
-
-<body class="page__body">
-  <header class="page-header wrapper">
-    <a class="logo" href="index.html">
-      <img class="logo__img-icon" src="img/logo-mobile-icon.svg" width="33" height="38" alt="Логотип Кэт энерджи">
-      <img class="logo__img-text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Логотип Кэт энерджи">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item site-list__item--active">
-          <a class="site-list__link" href="index.html">Главная</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="catalog.html">Каталог продукции</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="../fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="../fonts/oswaldmedium.woff2" as="font">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  
+  <body class="page__body">
+    <header class="page-header">
+      <a class="logo" href="">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="logo__img" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+        </picture>
+      </a>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--page" href="#">Главная</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link site-list__link--page" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--page" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   <main class="page-main">
     <form class="form wrapper" action="https://echo.htmlacademy.ru" method="post">
       <h1 class="form__title">Подбор программы</h1>
       <p class="form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <div class="form__form-wrapper">
         <ul class="form__list-source">
-          <li>
+          <li class="form__item-source">
             <label for="name">Имя:*</label>
             <input type="text" name="Имя" id="name" placeholder="Барсик" required>
           </li>
-          <li>
+          <li class="form__item-source">
             <label for="weight">Вес (кг):*</label>
             <input type="text" name="Вес" id="weight" placeholder="7" required>
           </li>
-          <li>
+          <li class="form__item-source">
             <label for="year">Возраст (лет):</label>
             <input type="text" name="Возраст" id="year" placeholder="7">
           </li>
         </ul>
         <ul class="form__list-target">
-          <li>
-            <input type="radio" name="Похудение" id="slim" checked>
+          <li class="form__item-target">
+            <input type="radio" name="Похудение" id="slim" class="visually-hidden form__input-radio" checked>
             <label for="slim">Похудение</label>
           </li>
-          <li>
-            <input type="radio" name="Набор массы" id="set">
+          <li class="form__item-target">
+            <input type="radio" name="Набор массы" id="set" class="visually-hidden form__input-radio">
             <label for="set">Набор массы</label>
           </li>
-          <li>
-            <input type="radio" name="Совет" id="advice">
+          <li class="form__item-target">
+            <input type="radio" name="Совет" id="advice" class="visually-hidden form__input-radio">
             <label for="advice">Не знаю (Нужен ваш совет)</label>
           </li>
         </ul>
@@ -110,25 +114,40 @@
       <img src="https://via.placeholder.com/150x150" width="320" height="362"" alt=" Карта">
     </section>
   </main>
-  <footer class="page-footer wrapper">
-    <a class="logo" href="index.html">
-      <img class="logo__img-text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Логотип Кэт энерджи">
-    </a>
-    <ul class="social__list">
-      <li class="social__item">
-        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-      </li>
-    </ul>
-    <div class="page-footer__copyright copyright">
-      <a class="copyright__text" href="https://htmlacademy.ru/intensive/adaptive"></a>Html Academy</a>
-      <a class="copyright__link" href="https://via.placeholder.com/150x150"><img
-          src="https://via.placeholder.com/150x150" alt="Логотип Html Academy"></a>
+  <footer class="page-footer">
+    <div class="page-footer__container">
+      <a class="page-footer__logo logo" href="#">
+        <img class="page-footer__logo-img" src="../img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт энерджи">
+      </a>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com/htmlacademy">
+            <svg class="social-list__icon social-list__icon--vk" width="23" height="16">
+              <use xlink:href="img/sprite.svg#icon-vk-mobile"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--insta" href="https://www.instagram.com/htmlacademy">
+            <svg class="social-list__icon social-list__icon--insta" width="16" height="16">
+              <use xlink:href="img/sprite.svg#icon-insta-mobile"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--fb" href="https://www.facebook.com/htmlacademy">
+            <svg class="social-list__icon social-list__icon--fb" width="22" height="22">
+              <use xlink:href="img/sprite.svg#icon-fb-mobile"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+          <span>Html Academy</span> 
+          <svg class="page-footer__copyright-icon" width="27" height="34">
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
+          </svg>
+       </a>
     </div>
   </footer>
 </body>
