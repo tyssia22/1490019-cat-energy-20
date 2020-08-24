@@ -1,60 +1,135 @@
-.form{
-    font-family: $fontfamily;
-    text-transform: $uppercase;
+.form {
+  @include wrapper;
+  text-transform: $uppercase;
 }
+
 .form__title {
-    @include title;
-    color: $black;
-    text-transform: none;
+  @include title;
+  color: $black;
+  text-transform: none;
+  font-weight: 400;
 }
 
-.form__description, .form-wrapper, .form__list-contact {
-    font-size: 16px;
-    line-height: 18px;
+.form__description,
+.form-wrapper,
+.form__list-contact {
+  font-size: 16px;
+  line-height: 18px;
+  color: $black;
+
+  @media (min-width: $tablet-width) {
+    max-width: 323px;
+  }
 }
 
-.form__list-source, .form__list-target, .form__list-contact, .form_additional-list {
-    @include list;
+.form__list-source,
+.form__list-target,
+.form__list-contact,
+.form_additional-list {
+  @include list;
 }
 
 .form_additional-title {
-    font-size: 24px;
-    line-height: 26px;
-    text-transform: none;
-    color: $black;
+  font-size: 24px;
+  line-height: 26px;
+  text-transform: none;
+  color: $black;
 }
 
 input::-webkit-input-placeholder {
-    text-transform: $uppercase;
-}
-input:-moz-placeholder {
-    text-transform: $uppercase;
-}
-textarea::-webkit-input-placeholder {
-    text-transform: $uppercase;
-}
-textarea:-moz-placeholder {
-    text-transform: $uppercase;
+  text-transform: $uppercase;
 }
 
-@media (min-width: $tablet-width)  {
-    .form__title {
-        font-size: 60px;
-        line-height: 60px;
-    }
-    
-    .form__description, .form-wrapper, .form__list-contact {
-        font-size: 20px;
-        line-height: 30px;
-    }
-    .form_additional-title {
-        @include title;
-        text-transform: none;
-        color: $black;
-    }
+input:-moz-placeholder {
+  text-transform: $uppercase;
 }
-@media (min-width: $desktop-width)  {
-    .form__form-wrapper {
-        display: flex;
-    }
-}    
+
+textarea::-webkit-input-placeholder {
+  text-transform: $uppercase;
+}
+
+textarea:-moz-placeholder {
+  text-transform: $uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .form__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .form__description,
+  .form-wrapper,
+  .form__list-contact {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form_additional-title {
+    @include title;
+    text-transform: none;
+    color: $black;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__form-wrapper {
+    display: flex;
+  }
+}
+
+.form__item-source {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.form__item-source input[type="text"] {
+  width: 100%;
+  margin-left: 14px;
+  border: 1px solid #e7e7e7;
+  padding: 13px 15px;
+}
+
+.form__item-source label {
+  flex-shrink: 0;
+}
+
+.form__item-target {
+  margin-top: 13px;
+}
+
+.form__item-target {
+  position: relative;
+  margin-left: 45px;
+
+  &::after {
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    left: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cdcdcd;
+    box-sizing: border-box;
+  }
+}
+
+.form__input-radio:checked+label {
+  &::before {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: none;
+    background: #68b738;
+    margin-top: 0;
+    content: "";
+    position: absolute;
+    left: -36px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+}

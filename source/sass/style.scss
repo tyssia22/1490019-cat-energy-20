@@ -4,10 +4,12 @@
 @import "global/mixin.scss";
 @import "global/common.scss";
 @import "blocks/page.scss";
-@import "blocks/page-header.scss";
-@import "blocks/main-nav.scss";
-@import "blocks/program-selection.scss";
 @import "blocks/button.scss";
+@import "blocks/page-header.scss";
+@import "blocks/logo.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/site-list.scss";
+@import "blocks/program-selection.scss";
 @import "blocks/programs.scss";
 @import "blocks/scheme-work.scss";
 @import "blocks/example.scss";
@@ -16,5 +18,5 @@
 @import "blocks/add-item.scss";
 @import "blocks/additional-goods.scss";
 @import "blocks/page-footer.scss";
-@import "blocks/copyright.scss";
+@import "blocks/social-list.scss";
 @import "blocks/form.scss";
