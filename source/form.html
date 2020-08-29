@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>HTML Academy: Кэт энерджи</title>
-    <link rel="preload" href="../fonts/oswaldregular.woff2" as="font">
-    <link rel="preload" href="../fonts/oswaldmedium.woff2" as="font">
-    <link href="css/normalize.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  
-  <body class="page__body">
-    <header class="page-header">
-      <a class="logo" href="">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="logo__img" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
-        </picture>
-      </a>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link site-list__link--page" href="#">Главная</a>
-          </li>
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link site-list__link--page" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a class="site-list__link site-list__link--page" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="page__body">
+  <header class="page-header page-header--other">
+    <a class="logo" href="">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="logo__img" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+      </picture>
+    </a>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a class="site-list__link site-list__link--page" href="index.html">Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link site-list__link--page" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="site-list__item site-list__item--active">
+          <a class="site-list__link site-list__link--page" href="#">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
   <main class="page-main">
-    <form class="form wrapper" action="https://echo.htmlacademy.ru" method="post">
+    <form class="form" action="https://echo.htmlacademy.ru" method="post">
       <h1 class="form__title">Подбор программы</h1>
       <p class="form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
-      <div class="form__form-wrapper">
+      <div class="form__wrapper">
         <ul class="form__list-source">
           <li class="form__item-source">
             <label for="name">Имя:*</label>
@@ -71,53 +71,65 @@
           </li>
         </ul>
       </div>
-      <h2 class="form_additional-title">Контактные данные(владельца кота)</h2>
+      <h2 class="form_additional-title form_additional-title--contact">Контактные данные (владельца кота)</h2>
       <ul class="form__list-contact">
-        <li>
-          <label for="email">E-mail:*</label>
-          <input type="email" name="Почта" id="email" placeholder="kuklachev@gmail.com" required>
+        <li class="form__item-contact">
+          <label for="email" class="form__text-contact">E-mail:*</label>
+          <input type="email" name="Почта" id="email" placeholder="kuklachev@gmail.com" class="form__input-contact"
+            required>
+          <svg class="form__icon-contact" width="20" height="14">
+            <use xlink:href="img/sprite.svg#icon-mail"></use>
+          </svg>
         </li>
-        <li>
-          <label for="phone">Телефон:*</label>
-          <input type="number" name="Телефон" id="phone" placeholder="8 (960) 900-60-90" required>
+        <li class="form__item-contact">
+          <label for="phone" class="form__text-contact">Телефон:*</label>
+          <input type="number" name="Телефон" id="phone" placeholder="8 (960) 900-60-90" class="form__input-contact"
+            required>
+          <svg class="form__icon-contact" width="20" height="20">
+            <use xlink:href="img/sprite.svg#icon-phone"></use>
+          </svg>
         </li>
       </ul>
-      <div>
-        <h2 class="form_additional-title">Комментарий</h2>
-        <textarea name="comment" id="" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+      <div class="form_additional-wrapper">
+        <label for="for-textarea" class="form_additional-title">Комментарий</label>
+        <textarea name="comment" id="for-textarea" rows="8" placeholder="Расскажите обо всех повадках кота"
+          class="form_additional-textarea"></textarea>
       </div>
       <h2 class="form_additional-title">Дополнительно</h2>
       <ul class="form_additional-list">
-        <li>
-          <input type="checkbox" name="Сахарозаменитель" id="sugar-substitute" checked>
+        <li class="form_additional-item">
+          <input type="checkbox" name="Сахарозаменитель" id="sugar-substitute" class="visually-hidden form_additional-input" checked>
           <label for="sugar-substitute">Сахарозаменитель</label>
         </li>
-        <li>
-          <input type="checkbox" name="Вода" id="water">
+        <li class="form_additional-item">
+          <input type="checkbox" name="Вода" id="water" class="visually-hidden form_additional-input">
           <label for="water">Питьевая вода</label>
         </li>
-        <li>
-          <input type="checkbox" name="Молоко" id="milk">
+        <li class="form_additional-item">
+          <input type="checkbox" name="Молоко" id="milk" class="visually-hidden form_additional-input">
           <label for="milk">Молоко</label>
         </li>
-        <li>
-          <input type="checkbox" name="Витамины" id="vitamins">
+        <li class="form_additional-item">
+          <input type="checkbox" name="Витамины" id="vitamins" class="visually-hidden form_additional-input">
           <label for="vitamins">Витамины</label>
         </li>
       </ul>
-      <button type="submit" class="button">Отправить заявку</button>
-      <p>* — Обязательные поля</p>
+      <button type="submit" class="form-button button">Отправить заявку</button>
+      <p class="form__text-required">* — Обязательные поля</p>
     </form>
-    <section class="contacts wrapper">
-      <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров</h2>
-      <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
-      <img src="https://via.placeholder.com/150x150" width="320" height="362"" alt=" Карта">
+    <section class="contacts">
+      <div class="contacts__wrapper contacts__wrapper--page">
+        <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров</h2>
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+      </div>
+      <div class="contacts__map" id="map"></div>
     </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__container">
       <a class="page-footer__logo logo" href="#">
-        <img class="page-footer__logo-img" src="../img/logo-footer.svg" width="128" height="24" alt="Логотип Кэт энерджи">
+        <img class="page-footer__logo-img" src="../img/logo-footer.svg" width="128" height="24"
+          alt="Логотип Кэт энерджи">
       </a>
       <ul class="social-list">
         <li class="social-list__item">
@@ -142,14 +154,72 @@
           </a>
         </li>
       </ul>
-        <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
-          <span>Html Academy</span> 
-          <svg class="page-footer__copyright-icon" width="27" height="34">
-            <use xlink:href="img/sprite.svg#htmlacademy"></use>
-          </svg>
-       </a>
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span>Html Academy</span>
+        <svg class="page-footer__copyright-icon" width="27" height="34">
+          <use xlink:href="img/sprite.svg#htmlacademy"></use>
+        </svg>
+      </a>
     </div>
   </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script>
+    ymaps.ready(init);
+    var myMap;
+
+    function init() {
+      if (document.body.clientWidth < 768) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938631, 30.323055],
+          zoom: 17
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [72, 53],
+          iconImageOffset: [-36, -53]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1300) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938631, 30.323055],
+          zoom: 17
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [72, 53],
+          iconImageOffset: [-36, -53]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      } else if (document.body.clientWidth >= 1300) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938963, 30.319293],
+          zoom: 17
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [124, 106],
+          iconImageOffset: [-72, -106]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      }
+    }
+
+  </script>
 </body>
 
 </html>

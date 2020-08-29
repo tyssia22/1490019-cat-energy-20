@@ -1,6 +1,12 @@
 .page-header {
   @include wrapper;
 
+  @media (max-width: $mobile-width-only) {
+    &--other {
+      border-bottom: 1px solid #d9d9d9;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
@@ -31,7 +37,6 @@
 
       @media (min-width: $tablet-width) {
         background-image: none;
-
       }
 
       @media (min-width: $desktop-width) {
