@@ -3,21 +3,17 @@
   font: 400 14px "Oswald", "Arial", sans-serif;
   line-height: 18px;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .page__body {
   background-color: $white;
   color: $greydark;
   min-height: 100%;
-  margin: 0 auto;
-  min-width: 280px;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-}
-
-@media (min-width: $tablet-width) {
-  .page {
-    font-size: 16px;
-    line-height: 24px;
-  }
 }

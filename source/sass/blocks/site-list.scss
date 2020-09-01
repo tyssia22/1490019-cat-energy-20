@@ -89,3 +89,9 @@
     }
   }
 }
+
+.site-list__item--active .site-list__link--page {
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $basicgreen;
+  }
+}

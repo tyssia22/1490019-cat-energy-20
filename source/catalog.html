@@ -5,14 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="preload" href="../fonts/oswaldregular.woff2" as="font">
-  <link rel="preload" href="../fonts/oswaldmedium.woff2" as="font">
+  <link rel="preload" href="/fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="/fonts/oswaldmedium.woff2" as="font">
   <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header page-header--other">
     <a class="logo" href="">
       <picture>
         <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
@@ -26,10 +26,10 @@
       </button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
-          <a class="site-list__link site-list__link--page" href="#">Главная</a>
+          <a class="site-list__link site-list__link--page" href="index.html">Главная</a>
         </li>
         <li class="site-list__item site-list__item--active">
-          <a class="site-list__link site-list__link--page" href="catalog.html">Каталог продукции</a>
+          <a class="site-list__link site-list__link--page" href="">Каталог продукции</a>
         </li>
         <li class="site-list__item">
           <a class="site-list__link site-list__link--page" href="form.html">Подбор программы</a>
@@ -253,42 +253,42 @@
           <li class="additional-goods__item">
             <h3 class="additional-goods__item-title">Сахарозаменитель</h3>
             <span class="additional-goods__item-volume">1 упаковка (100 г)</span>
-            <span class="additional-goods__item-price">200 р.</span>
-            <a class="additional-goods-button button" href="">Заказать</a>
+            <span class="additional-goods__item-price">200 р</span>
+            <a class="additional-goods__button button" href="">Заказать</a>
           </li>
           <li class="additional-goods__item">
             <h3 class="additional-goods__item-title">Питьевая вода</h3>
             <span class="additional-goods__item-volume">5 литров</span>
-            <span class="additional-goods__item-price">50 р.</span>
-            <a class="additional-goods-button button" href="">Заказать</a>
+            <span class="additional-goods__item-price">50 р</span>
+            <a class="additional-goods__button button" href="">Заказать</a>
           </li>
           <li class="additional-goods__item">
             <h3 class="additional-goods__item-title">Молоко</h3>
             <span class="additional-goods__item-volume">1 литр</span>
-            <span class="additional-goods__item-price">100 р.</span>
-            <a class="additional-goods-button button" href="">Заказать</a>
+            <span class="additional-goods__item-price">100 р</span>
+            <a class="additional-goods__button button" href="">Заказать</a>
           </li>
           <li class="additional-goods__item">
             <h3 class="additional-goods__item-title">Витамины</h3>
             <span class="additional-goods__item-volume">1 упаковка (30 г)</span>
-            <span class="additional-goods__item-price">300 р.</span>
-            <a class="additional-goods-button button" href="">Заказать</a>
+            <span class="additional-goods__item-price">300 р</span>
+            <a class="additional-goods__button button" href="">Заказать</a>
           </li>
         </ul>
         <div class="additional-goods__action">
           <svg width="55" height="60">
             <use xlink:href="img/sprite.svg#icon-gift"></use>
           </svg>
-          <p class="additional-goods__gift">Закажите все<br> и получите чехол для<br> кота в подарок!</p>
+          <p class="additional-goods__gift">Закажите все и получите чехол для кота в подарок!</p>
           <div>
           </div>
     </section>
     <section class="contacts">
-      <div class="contacts__wrapper">
+      <div class="contacts__wrapper contacts__wrapper--page">
         <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров</h2>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
-      <img src="https://via.placeholder.com/150x150" width="320" height="362"" alt=" Карта">
+      <div class="contacts__map" id="map"></div>
     </section>
   </main>
   <footer class="page-footer">
@@ -328,6 +328,64 @@
       </a>
     </div>
   </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script>
+    ymaps.ready(init);
+    var myMap;
+
+    function init() {
+      if (document.body.clientWidth < 768) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938631, 30.323055],
+          zoom: 17
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [72, 53],
+          iconImageOffset: [-36, -53]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1300) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938631, 30.323055],
+          zoom: 17
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [72, 53],
+          iconImageOffset: [-36, -53]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      } else if (document.body.clientWidth >= 1300) {
+        myMap = new ymaps.Map("map", {
+          center: [59.938963, 30.319293],
+          zoom: 17
+        });
+
+        myMap.behaviors.disable('scrollZoom');
+
+        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/map-pin.png',
+          iconImageSize: [124, 106],
+          iconImageOffset: [-72, -106]
+        });
+
+        myMap.geoObjects.add(myPlacemark);
+      }
+    }
+
+  </script>
 </body>
 
 </html>
