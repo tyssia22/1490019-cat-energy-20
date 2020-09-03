@@ -1,6 +1,10 @@
 .additional-goods {
   @include wrapper;
 
+  @media (min-width: $tablet-width) {
+    padding-bottom: 75px;
+  }
+
   @media (min-width: $desktop-width) {
     width: 1220px;
     margin: 0 auto;
@@ -54,191 +58,192 @@
   }
 }
 
-@media (min-width: $tablet-width) {
-  .additional-goods__wrapper {
+.additional-goods__list {
+  @include list;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $greylighttwo;
+  }
+
+  @media (min-width: $desktop-width) {
+    border: none;
+  }
+}
+
+.additional-goods__item-title {
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $blacktwo;
+  font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    padding-left: 38px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 161px;
+  }
+}
+
+.additional-goods__wrapper {
+  @media (min-width: $tablet-width) {
     padding-top: 50px;
     width: 708px;
+  }
 
-    @media (min-width: $desktop-width) {
-      display: flex;
-      justify-content: space-between;
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.additional-goods__item-volume {
+  line-height: 20px;
+  text-align: left;
+  font-family: "Arial", "Times New Roman", sans-serif;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 244px;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    min-width: 132px;
+    text-align: left;
+  }
+}
+
+.additional-goods__item-price {
+  text-transform: uppercase;
+  margin-left: 120px;
+  font-family: "Arial", "Times New Roman", sans-serif;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 37px;
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
+}
+
+.additional-goods__button {
+  margin-top: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 37px;
+    margin-right: 37px;
+    margin-top: 0;
+    font-size: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 244px;
+    margin: 0;
+    margin-top: 15px;
+  }
+}
+
+.additional-goods__action {
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: $basicgreen;
+  background-size: cover;
+  position: relative;
+  min-height: 289px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    min-height: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    height: 289px;
+    width: 245px;
+  }
+}
+
+.additional-goods__action svg {
+  fill: $white;
+  position: absolute;
+  top: 58px;
+  left: 110px;
+
+  @media (min-width: $tablet-width) {
+    left: 78px;
+    bottom: 50px;
+  }
+
+  @media (min-width: $tablet-width) {
+    left: 93px;
+  }
+}
+
+.additional-goods__gift {
+  color: $white;
+  line-height: 20px;
+  margin-top: 39px;
+  text-align: center;
+  font-family: "Arial", "Times New Roman", sans-serif;
+  font-size: 16px;
+  position: relative;
+  top: 186px;
+
+  @media (min-width: $tablet-width) {
+    top: 71px;
+    left: 423px;
+    text-align: left;
+    max-width: 161px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 161px;
+    left: 45px;
+    text-align: center;
+  }
+}
+
+.additional-goods__item {
+  position: relative;
+  padding-bottom: 15px;
+  border-top: 1px solid $greylighttwo;
+
+  &:last-child {
+    border-bottom: 1px solid $greylighttwo;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &:first-child {
+      border-top: 0;
     }
   }
 
-
-  .additional-goods__list {
-    @include list;
-
-    @media (min-width: $tablet-width) {
-      border: 1px solid $greylighttwo;
-    }
-
-    @media (min-width: $desktop-width) {
-      border: none;
-    }
-  }
-
-  .additional-goods__item {
-    position: relative;
+  @media (min-width: $desktop-width) {
     padding-bottom: 15px;
-    border-top: 1px solid $greylighttwo;
+    display: flex;
+    justify-content: space-between;
+    width: 896px;
 
     &:last-child {
       border-bottom: 1px solid $greylighttwo;
-    }
-
-    &:first-child {
-      border-top: none;
-    }
-
-    @media (min-width: $tablet-width) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding-bottom: 15px;
-      display: flex;
-      justify-content: space-between;
-      width: 896px;
-
-      &:last-child {
-        border-bottom: 1px solid $greylighttwo;
-      }
-    }
-  }
-
-  .additional-goods__item-title {
-    font-size: 16px;
-    line-height: 16px;
-    text-transform: uppercase;
-    color: $blacktwo;
-    font-weight: 400;
-
-    @media (min-width: $tablet-width) {
-      display: inline-block;
-      padding-left: 38px;
-      font-size: 20px;
-      line-height: 20px;
-    }
-
-    @media (min-width: $desktop-width) {
-      min-width: 161px;
-    }
-  }
-
-  .additional-goods__item-volume {
-    line-height: 20px;
-    text-align: left;
-    font-family: "Arial", "Times New Roman", sans-serif;
-
-    @media (min-width: $tablet-width) {
-      margin-left: 244px;
-      text-align: right;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-left: 0;
-      min-width: 132px;
-      text-align: left;
-    }
-  }
-
-  .additional-goods__item-price {
-    text-transform: uppercase;
-    text-align: right;
-    font-family: "Arial", "Times New Roman", sans-serif;
-
-    @media (min-width: $tablet-width) {
-      padding-right: 37px;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding-right: 0;
-    }
-  }
-
-  .additional-goods__button {
-    margin-top: 8px;
-
-    @media (min-width: $tablet-width) {
-      margin-left: 37px;
-      margin-right: 37px;
-      margin-top: 0;
-      font-size: 16px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 244px;
-      margin: 0;
-      margin-top: 15px;
-    }
-  }
-
-  .additional-goods__action {
-    background-image: url("../img/gift-photo-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: $basicgreen;
-    background-size: cover;
-    position: relative;
-    min-height: 289px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/gift-photo-mobile@2x.jpg");
-    }
-
-    @media (min-width: $tablet-width) {
-      background-image: url("../img/gift-photo-tablet@1x.jpg");
-      min-height: 200px;
-    }
-
-    @media (min-width: $desktop-width) {
-      background-image: url("../img/gift-photo-desktop@1x.jpg");
-      height: 289px;
-      width: 245px;
-    }
-  }
-
-  .additional-goods__action svg {
-    fill: $white;
-    position: absolute;
-    top: 58px;
-    left: 110px;
-
-    @media (min-width: $tablet-width) {
-      left: 78px;
-      bottom: 50px;
-    }
-
-    @media (min-width: $tablet-width) {
-      left: 93px;
-    }
-  }
-
-  .additional-goods__gift {
-    color: $white;
-    line-height: 20px;
-    margin-top: 39px;
-    text-align: center;
-    font-family: "Arial", "Times New Roman", sans-serif;
-    font-size: 16px;
-    position: relative;
-    top: 186px;
-
-    @media (min-width: $tablet-width) {
-      top: 71px;
-      left: 423px;
-      text-align: left;
-      max-width: 161px;
-    }
-
-    @media (min-width: $desktop-width) {
-      top: 161px;
-      left: 0;
-      text-align: center;
     }
   }
 }

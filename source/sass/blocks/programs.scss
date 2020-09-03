@@ -83,7 +83,7 @@
 
   &::after {
     content: "";
-    background-image: url("img/icon-cat-slim.svg");
+    background-image: url("../img/icon-cat-slim.svg");
     width: 36px;
     height: 50px;
     background-repeat: no-repeat;
@@ -109,7 +109,7 @@
 
   &--weight {
     &::after {
-      background-image: url("img/icon-cat-pro.svg");
+      background-image: url("../img/icon-cat-pro.svg");
       background-repeat: no-repeat;
       width: 67px;
       height: 50px;
@@ -190,7 +190,7 @@
     position: absolute;
     bottom: 20px;
     left: 103px;
-    background-image: url("img/icon-right-arrow-long.svg");
+    background-image: url("../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
@@ -214,7 +214,7 @@
 
 .programs__link:hover::after,
 .programs__link:focus::after {
-  background-image: url("img/icon-right-arrow-verylong.svg");
+  background-image: url("../img/icon-right-arrow-verylong.svg");
   width: 32px;
 }
 

@@ -211,6 +211,10 @@
   align-items: center;
   position: relative;
   width: 46%;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .form__icon-contact {
@@ -330,7 +334,7 @@
   content: "";
   position: absolute;
   left: 0;
-  top: -5px;
+  top: 0;
   width: 26px;
   height: 26px;
   border: 1px solid $greylighttwo;
@@ -340,7 +344,7 @@
   content: "";
   position: absolute;
   left: 9px;
-  top: 7px;
+  top: 14px;
   margin-top: -3px;
   width: 8px;
   height: 14px;

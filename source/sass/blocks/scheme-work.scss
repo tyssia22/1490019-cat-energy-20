@@ -113,6 +113,10 @@
       padding-top: 0;
     }
   }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .scheme-work__text {
