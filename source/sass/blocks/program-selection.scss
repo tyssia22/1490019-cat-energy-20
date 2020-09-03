@@ -4,24 +4,25 @@
   color: $white;
   position: relative;
   padding-bottom: 22px;
-  margin-left: 0;
-  margin-right: 0;
 
   @media (min-width: $tablet-width) {
     text-align: left;
     color: $black;
     background-image: none;
-    padding-left: 87px;
+    padding-left: 117px;
   }
 
   @media (min-width: $desktop-width) {
     min-height: 530px;
-    padding-left: 150px;
+    width: 1210px;
+    padding-left: 190px;
+    margin: 0 auto;
   }
 }
 
 .program-selection__title {
   padding-top: 27px;
+
   @include title;
   margin: 0;
   font-weight: 400;
@@ -30,18 +31,21 @@
     font-size: 60px;
     line-height: 60px;
     max-width: 520px;
+    padding-top: 30px;
+
   }
 }
 
 .program-selection__description {
   line-height: 14px;
-  text-transform: $uppercase;
+  text-transform: uppercase;
   padding-top: 25px;
   margin-top: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    padding-top: 45px;
   }
 }
 
@@ -74,7 +78,7 @@
   @media (min-width: $tablet-width) {
     width: 244px;
     position: absolute;
-    top: 230px;
+    top: 250px;
     z-index: 2;
   }
 }

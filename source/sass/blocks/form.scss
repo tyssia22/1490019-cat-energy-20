@@ -65,7 +65,7 @@
 
 
 .form__list-contact,
-.form_additional-list {
+.form__additional-list {
   @include wrapper;
 }
 
@@ -137,7 +137,7 @@
   margin-top: 20px;
 }
 
-.form_additional-title {
+.form__additional-title {
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
@@ -253,7 +253,7 @@
   }
 }
 
-.form__input-radio:checked+label::before {
+.form__input-radio:checked + label::before {
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -268,7 +268,7 @@
 
 }
 
-.form__input-radio+label::after {
+.form__input-radio + label::after {
   border-radius: 50%;
   content: "";
   position: absolute;
@@ -285,7 +285,7 @@
   color: #bababa;
 }
 
-.form_additional-textarea {
+.form__additional-textarea {
   width: 100%;
   padding: 13px 15px;
   border: 1px solid #e7e7e7;
@@ -293,7 +293,7 @@
   box-sizing: border-box;
 }
 
-.form_additional-wrapper {
+.form__additional-wrapper {
   @include wrapper;
 
   @media (min-width:$desktop-width) {
@@ -302,7 +302,7 @@
   }
 }
 
-.form_additional-list {
+.form__additional-list {
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -318,7 +318,7 @@
   }
 }
 
-.form_additional-item {
+.form__additional-item {
   padding-left: 44px;
   padding-bottom: 20px;
   position: relative;
@@ -330,7 +330,7 @@
   }
 }
 
-.form_additional-input+label::before {
+.form__additional-input+label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -340,7 +340,7 @@
   border: 1px solid #cdcdcd;
 }
 
-.form_additional-input:checked+label::after {
+.form__additional-input:checked + label::after {
   content: "";
   position: absolute;
   left: 9px;

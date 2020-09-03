@@ -13,7 +13,7 @@
 
 <body class="page__body">
   <header class="page-header page-header--other">
-    <a class="logo" href="">
+    <a class="logo" href="index.html">
       <picture>
         <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
         <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -71,7 +71,7 @@
           </li>
         </ul>
       </div>
-      <h2 class="form_additional-title form_additional-title--contact">Контактные данные (владельца кота)</h2>
+      <h2 class="form__additional-title form_additional-title--contact">Контактные данные (владельца кота)</h2>
       <ul class="form__list-contact">
         <li class="form__item-contact">
           <label for="email" class="form__text-contact">E-mail:*</label>
@@ -90,27 +90,27 @@
           </svg>
         </li>
       </ul>
-      <div class="form_additional-wrapper">
-        <label for="for-textarea" class="form_additional-title">Комментарий</label>
+      <div class="form__additional-wrapper">
+        <label for="for-textarea" class="form__additional-title">Комментарий</label>
         <textarea name="comment" id="for-textarea" rows="8" placeholder="Расскажите обо всех повадках кота"
-          class="form_additional-textarea"></textarea>
+          class="form__additional-textarea"></textarea>
       </div>
-      <h2 class="form_additional-title">Дополнительно</h2>
-      <ul class="form_additional-list">
-        <li class="form_additional-item">
+      <h2 class="form__additional-title">Дополнительно</h2>
+      <ul class="form__additional-list">
+        <li class="form__additional-item">
           <input type="checkbox" name="Сахарозаменитель" id="sugar-substitute" class="visually-hidden form_additional-input" checked>
           <label for="sugar-substitute">Сахарозаменитель</label>
         </li>
-        <li class="form_additional-item">
-          <input type="checkbox" name="Вода" id="water" class="visually-hidden form_additional-input">
+        <li class="form__additional-item">
+          <input type="checkbox" name="Вода" id="water" class="visually-hidden form__additional-input">
           <label for="water">Питьевая вода</label>
         </li>
-        <li class="form_additional-item">
-          <input type="checkbox" name="Молоко" id="milk" class="visually-hidden form_additional-input">
+        <li class="form__additional-item">
+          <input type="checkbox" name="Молоко" id="milk" class="visually-hidden form__additional-input">
           <label for="milk">Молоко</label>
         </li>
-        <li class="form_additional-item">
-          <input type="checkbox" name="Витамины" id="vitamins" class="visually-hidden form_additional-input">
+        <li class="form__additional-item">
+          <input type="checkbox" name="Витамины" id="vitamins" class="visually-hidden form__additional-input">
           <label for="vitamins">Витамины</label>
         </li>
       </ul>
@@ -122,7 +122,9 @@
         <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров</h2>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
-      <div class="contacts__map" id="map"></div>
+      <div class="contacts__map" id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123688!2d30.320894615651014!3d59.93879686904841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1523735281602"  allowfullscreen></iframe>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
@@ -162,64 +164,7 @@
       </a>
     </div>
   </footer>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-  <script>
-    ymaps.ready(init);
-    var myMap;
-
-    function init() {
-      if (document.body.clientWidth < 768) {
-        myMap = new ymaps.Map("map", {
-          center: [59.938631, 30.323055],
-          zoom: 17
-        });
-
-        myMap.behaviors.disable('scrollZoom');
-
-        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
-          iconLayout: 'default#image',
-          iconImageHref: 'img/map-pin.png',
-          iconImageSize: [72, 53],
-          iconImageOffset: [-36, -53]
-        });
-
-        myMap.geoObjects.add(myPlacemark);
-      } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1300) {
-        myMap = new ymaps.Map("map", {
-          center: [59.938631, 30.323055],
-          zoom: 17
-        });
-
-        myMap.behaviors.disable('scrollZoom');
-
-        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
-          iconLayout: 'default#image',
-          iconImageHref: 'img/map-pin.png',
-          iconImageSize: [72, 53],
-          iconImageOffset: [-36, -53]
-        });
-
-        myMap.geoObjects.add(myPlacemark);
-      } else if (document.body.clientWidth >= 1300) {
-        myMap = new ymaps.Map("map", {
-          center: [59.938963, 30.319293],
-          zoom: 17
-        });
-
-        myMap.behaviors.disable('scrollZoom');
-
-        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
-          iconLayout: 'default#image',
-          iconImageHref: 'img/map-pin.png',
-          iconImageSize: [124, 106],
-          iconImageOffset: [-72, -106]
-        });
-
-        myMap.geoObjects.add(myPlacemark);
-      }
-    }
-
-  </script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

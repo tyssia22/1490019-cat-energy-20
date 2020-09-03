@@ -5,6 +5,9 @@
     background-color: $white;
     position: relative;
   }
+  @media (min-width: $desktop-width) {
+    background-color: $grey;
+      }
 }
 
 .example__wrapper {
@@ -16,7 +19,9 @@
     background-color: $grey;
     position: relative;
     min-height: 462px;
-    width: auto;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 
@@ -25,11 +30,12 @@
   line-height: 40px;
   color: $black;
   font-weight: 400;
-  padding-top: 27px;
+  padding-top: 60px;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
+    padding-top: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -58,6 +64,7 @@
   display: flex;
   margin-bottom: 35px;
   justify-content: space-between;
+  padding-top: 20px;
 
   @media (min-width: $tablet-width) {
     padding-top: 39px;
@@ -74,7 +81,7 @@
   width: 124px;
   padding: 15px 10px 5px;
   text-align: center;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $greylighttwo;
   border-radius: 5px;
   box-sizing: border-box;
 
@@ -157,17 +164,20 @@
 
 .example__img-container {
   position: relative;
+  padding-top: 40px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     min-height: 465px;
-    background-color: #eaeaea;
+    background-color: $greyone;
   }
 
   @media (min-width: $desktop-width) {
-    background-color: inherit;
     margin-right: 70px;
     margin-left: 134px;
+    min-width: 690px;
+    position: absolute;
+    background-color: $grey;
   }
 }
 
@@ -201,10 +211,10 @@
 .example__range {
   display: flex;
   justify-content: space-between;
-  width: 228px;
+  width: 200px;
   margin: 0 auto;
   padding-bottom: 25px;
-  padding-top: 23px;
+  padding-top: 50px;
 
   @media (min-width: $tablet-width) {
     width: 590px;
@@ -254,15 +264,15 @@
   position: relative;
   width: 84px;
   height: 14px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $greylighttwo;
   border-radius: 6px;
-  background: #ffffff;
+  background: $white;
   transition: 0.3s;
 
   @media (min-width: $tablet-width) {
     height: 6px;
     width: 428px;
-    background-color: #dcdcdc;
+    background-color: $greylightthree;
     border: none;
   }
 
@@ -274,7 +284,7 @@
     width: 35px;
     height: 6px;
     border-radius: 6px;
-    background: #68b738;
+    background: $basicgreen;
     transition: 0.3s;
 
     @media (min-width: $tablet-width) {
@@ -305,8 +315,8 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    border: 1px solid #cdcdcd;
-    background: #ffffff;
+    border: 1px solid $greylighttwo;
+    background: $white;
     cursor: pointer;
 
     &:active {
@@ -330,19 +340,10 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .example__wrapper-left {
-    min-width: 436px;
-    margin-left: 110px;
-  }
 
-  .example__img-container {
-    min-width: 690px;
-    position: absolute;
-    background-color: $grey;
-  }
-
-  .example__cost-price {
+.example__cost-price {
+  @media (min-width: $desktop-width) {
     padding-left: 63px;
   }
 }
+

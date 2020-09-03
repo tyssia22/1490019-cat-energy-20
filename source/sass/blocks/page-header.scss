@@ -3,7 +3,7 @@
 
   @media (max-width: $mobile-width-only) {
     &--other {
-      border-bottom: 1px solid #d9d9d9;
+      border-bottom: 1px solid $greylightone;
     }
   }
 
@@ -11,6 +11,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-top: 20px;
   }
 
   @media (min-width: $desktop-width) {
@@ -23,13 +24,12 @@
       content: "";
       position: absolute;
       background-image: url(../img/index-background-mobile@1x.jpg);
-      background-size: cover;
       background-repeat: no-repeat;
       background-position: bottom;
       left: 0;
       min-height: 306px;
       width: 100%;
-
+      background-color: $basicgreenhover;
 
       @media (min-resolution: 2dppx) {
         background-image: url(../img/index-background-mobile@2x.jpg);
@@ -37,6 +37,7 @@
 
       @media (min-width: $tablet-width) {
         background-image: none;
+        background-color: $white;
       }
 
       @media (min-width: $desktop-width) {
@@ -45,7 +46,7 @@
         min-height: 696px;
         top: 0;
         left: 50%;
-
+        background-color: $basicgreenhover;
         @media (min-resolution: 2dppx) {
           background-image: url(../img/index-background-desktop@2x.jpg);
         }
@@ -58,8 +59,8 @@
   .page-header__container {
     @include wrapper;
     background-color: $white;
-    background-image: url(/img/index-can-desktop@1x.png),
-      url(/img/index-background-desktop@1x.jpg);
+    background-image: url(img/index-can-desktop@1x.png),
+      url(img/index-background-desktop@1x.jpg);
     background-repeat: no-repeat, no-repeat;
     background-position: center 0, right -140px;
     background-size: 709px 609px;

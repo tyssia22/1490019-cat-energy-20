@@ -5,9 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="preload" href="../fonts/oswaldregular.woff2" as="font">
-  <link rel="preload" href="../fonts/oswaldmedium.woff2" as="font">
-  <link href="css/normalize.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -116,7 +115,7 @@
             <p class="example__cost">Затраты на питание: <span class="example__cost-price"> 15 000 РУБ. </span></p>
           </div>
         </div>
-        <div>
+        <div class="example__img-wrapper">
           <div class="example__img-container">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png, img/before-desktop@2x.png 2x">
@@ -144,16 +143,18 @@
     </section>
     <section class="contacts">
       <div class="contacts__wrapper">
-        <h2 class="contacts__title">Приглашаем к сотрудничеству дилеров!</h2>
+        <h2 class="contacts__title">Приглашаем <br> к сотрудничеству дилеров!</h2>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span> </address>
       </div>
-      <div class="contacts__map" id="map"></div>
+      <div class="contacts__map" id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123688!2d30.320894615651014!3d59.93879686904841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1523735281602"  allowfullscreen></iframe>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__container">
       <a class="page-footer__logo logo" href="#">
-        <img class="page-footer__logo-img" src="/img/logo-footer.svg" width="128" height="24"
+        <img class="page-footer__logo-img" src="img/logo-footer.svg" width="128" height="24"
           alt="Логотип Кэт энерджи">
       </a>
       <ul class="social-list">
@@ -187,64 +188,7 @@
       </a>
     </div>
   </footer>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-  <script>
-    ymaps.ready(init);
-    var myMap;
-
-    function init() {
-      if (document.body.clientWidth < 768) {
-        myMap = new ymaps.Map("map", {
-          center: [59.938631, 30.323055],
-          zoom: 17
-        });
-
-        myMap.behaviors.disable('scrollZoom');
-
-        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
-          iconLayout: 'default#image',
-          iconImageHref: 'img/map-pin.png',
-          iconImageSize: [72, 53],
-          iconImageOffset: [-36, -53]
-        });
-
-        myMap.geoObjects.add(myPlacemark);
-      } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1300) {
-        myMap = new ymaps.Map("map", {
-          center: [59.938631, 30.323055],
-          zoom: 17
-        });
-
-        myMap.behaviors.disable('scrollZoom');
-
-        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
-          iconLayout: 'default#image',
-          iconImageHref: 'img/map-pin.png',
-          iconImageSize: [72, 53],
-          iconImageOffset: [-36, -53]
-        });
-
-        myMap.geoObjects.add(myPlacemark);
-      } else if (document.body.clientWidth >= 1300) {
-        myMap = new ymaps.Map("map", {
-          center: [59.938963, 30.319293],
-          zoom: 17
-        });
-
-        myMap.behaviors.disable('scrollZoom');
-
-        var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
-          iconLayout: 'default#image',
-          iconImageHref: 'img/map-pin.png',
-          iconImageSize: [124, 106],
-          iconImageOffset: [-72, -106]
-        });
-
-        myMap.geoObjects.add(myPlacemark);
-      }
-    }
-
-  </script>
-</body>
+  <script src="js/script.js"></script>
+  </body>
 
 </html>

@@ -11,12 +11,11 @@
   @include title;
   color: $black;
   font-weight: 400;
-  padding-top: 27px;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    padding-bottom: 164px;
+    padding-bottom: 130px;
       }
 }
 
@@ -28,7 +27,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 60px;
-    grid-row-gap: 140px;
+    grid-row-gap: 120px;
+    padding-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
@@ -76,6 +76,7 @@
     text-align: center;
     max-width: 144px;
     display: inline-block;
+    padding-top: 90px;
 
     & br {
       display: none;
@@ -107,12 +108,12 @@
 }
 
 .catalog__item-button {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   font-size: 16px;
 
   @media (min-width: $tablet-width) {
     width: 248px;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
   }
 
   @media (min-width: $desktop-width) {
