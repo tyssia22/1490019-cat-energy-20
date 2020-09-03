@@ -1,7 +1,7 @@
 .button {
   @include link;
   color: $white;
-  text-transform: $uppercase;
+  text-transform: uppercase;
   background-color: $basicgreen;
   box-sizing: border-box;
   display: inline-block;

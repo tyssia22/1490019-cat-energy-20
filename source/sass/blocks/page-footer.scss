@@ -33,12 +33,12 @@
 }
 
 .page-footer__copyright {
+  @include link;
   padding: 22px 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  @include link;
   font-family: "Arial", "Times New Roman", sans-serif;
   font-size: 16px;
   color: $greydark;
@@ -61,7 +61,7 @@
 }
 
 .page-footer__copyright-icon {
-  fill: #666666;
+  fill: $greydarkone;
 
   @media (min-width: $desktop-width) {
     padding-left: 22px;

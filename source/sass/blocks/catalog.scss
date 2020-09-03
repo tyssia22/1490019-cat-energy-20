@@ -16,7 +16,7 @@
     font-size: 60px;
     line-height: 60px;
     padding-bottom: 130px;
-      }
+  }
 }
 
 .catalog__list {
@@ -42,7 +42,7 @@
   padding-top: 19px;
   display: flex;
   flex-wrap: wrap;
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid $greylightone;
   position: relative;
   justify-content: center;
 
@@ -53,7 +53,6 @@
     justify-content: space-between;
     height: 430px;
     align-items: center;
-    flex-direction: column;
     border-top: none;
   }
 
@@ -93,7 +92,7 @@
     font-size: 16px;
     line-height: 16px;
     color: $greydark;
-    border-bottom: 1px solid #cdcdcd;
+    border-bottom: 1px solid $greylighttwo;
   }
 }
 

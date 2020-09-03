@@ -1,5 +1,5 @@
 .form {
-  text-transform: $uppercase;
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
   color: $black;
@@ -31,12 +31,12 @@
 .form__description {
   padding-left: 20px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     max-width: 323px;
     padding-left: 71px;
   }
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     max-width: 323px;
     padding-left: 0;
   }
@@ -73,12 +73,12 @@
   width: 280px;
   padding: 0 20px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     width: 100%;
     padding: 0;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     width: 569px;
   }
 }
@@ -93,11 +93,11 @@
 .form__item-source input[type="text"] {
   width: 100%;
   margin-left: 14px;
-  border: 1px solid #e7e7e7;
+  border: 1px solid $greylightfour;
   padding: 13px 15px;
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    border: 1px solid $greylighttwo;
   }
 
   &:active {
@@ -114,13 +114,13 @@
 }
 
 .form__list-target {
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid $greylightone;
+  border-bottom: 1px solid $greylightone;
   padding-bottom: 22px;
   padding-top: 22px;
 
   @media (min-width: $tablet-width) {
-    border: 1px solid #e7e7e7;
+    border: 1px solid $greylightfour;
   }
 
   @media (min-width: $desktop-width) {
@@ -149,7 +149,7 @@
   padding-left: 20px;
   margin-bottom: 35px;
   margin-top: 26px;
-  background: #ffffff;
+  background: $white;
   margin-right: 77px;
 
   &::before {
@@ -181,11 +181,11 @@
     top: 30%;
   }
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     padding-left: 71px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding-left: 0;
   }
 }
@@ -203,6 +203,7 @@
 
 .form__item-contact:first-child {
   margin-bottom: 14px;
+  margin-right: 78px;
 }
 
 .form__item-contact {
@@ -210,10 +211,6 @@
   align-items: center;
   position: relative;
   width: 46%;
-}
-
-.form__item-contact:first-child {
-  margin-right: 78px;
 }
 
 .form__icon-contact {
@@ -230,10 +227,10 @@
   width: 100%;
   padding: 13px 15px;
   margin-left: 12px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $greylighttwo;
 
   &:hover {
-    border: 1px solid #cdcdcd;
+    border: 1px solid $greylighttwo;
   }
 
   &:active {
@@ -265,30 +262,29 @@
   left: -36px;
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
-
 }
 
 .form__input-radio + label::after {
-  border-radius: 50%;
   content: "";
+  border-radius: 50%;
   position: absolute;
   left: -45px;
   top: 50%;
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $greylighttwo;
   box-sizing: border-box;
 }
 
-.form__input-radio:active+label {
-  color: #bababa;
+.form__input-radio:active + label {
+  color: $greylightfive;
 }
 
 .form__additional-textarea {
   width: 100%;
   padding: 13px 15px;
-  border: 1px solid #e7e7e7;
+  border: 1px solid $greylightfour;
   height: 151px;
   box-sizing: border-box;
 }
@@ -296,7 +292,7 @@
 .form__additional-wrapper {
   @include wrapper;
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     width: 1220px;
     padding: 0;
   }
@@ -330,14 +326,14 @@
   }
 }
 
-.form__additional-input+label::before {
+.form__additional-input + label::before {
   content: "";
   position: absolute;
   left: 0;
   top: -5px;
   width: 26px;
   height: 26px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $greylighttwo;
 }
 
 .form__additional-input:checked + label::after {
@@ -348,8 +344,8 @@
   margin-top: -3px;
   width: 8px;
   height: 14px;
-  border-right: 1px solid #68b738;
-  border-bottom: 1px solid #68b738;
+  border-right: 1px solid $basicgreen;
+  border-bottom: 1px solid $basicgreen;
   transform: translateY(-50%) rotate(45deg);
 }
 
@@ -360,11 +356,11 @@
   margin-right: 20px;
   width: 280px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     width: 282px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     width: 568px;
     margin-left: 0;
     margin-bottom: 82px;

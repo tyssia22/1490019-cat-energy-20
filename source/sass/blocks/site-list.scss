@@ -18,12 +18,12 @@
 
 
 .site-list__item {
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid $greylightsix;
   padding-top: 24px;
   padding-bottom: 24px;
 
   &:first-child {
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid $greylightsix;
   }
 
   &:last-child {
@@ -57,7 +57,6 @@
   }
 
   @media (min-width: $desktop-width) {
-
     &--active {
       border-bottom: 2px solid $white;
     }
@@ -67,7 +66,7 @@
 .site-list__link {
   @include link;
   color: $black;
-  text-transform: $uppercase;
+  text-transform: uppercase;
   font-size: 20px;
   line-height: 20px;
 

@@ -1,10 +1,10 @@
 .add-item {
   padding-top: 23px;
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid $greylightone;
 
   @media (min-width: $tablet-width) {
     background-color: $white;
-    border: 2px solid #f2f2f2;
+    border: 2px solid $grey;
   }
 
   &::after {
@@ -16,12 +16,12 @@
     width: 30px;
     height: 30px;
     opacity: 0.2;
-    background: #ffffff url(../img/icon-plus-mobile.svg) no-repeat center;
+    background: $white url("../img/icon-plus-mobile.svg") no-repeat center;
 
     @media (min-width: $tablet-width) {
       width: 60px;
       height: 60px;
-      background-image: url(../img/icon-plus.svg);
+      background-image: url("../img/icon-plus.svg");
       top: 50px;
     }
   }
@@ -29,7 +29,7 @@
 
 .add-item__text {
   color: $blackone;
-  text-transform: $uppercase;
+  text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
   padding-top: 30px;
@@ -76,4 +76,3 @@
     width: 169px;
   }
 }
-

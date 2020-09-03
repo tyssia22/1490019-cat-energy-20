@@ -30,7 +30,6 @@
     background: $basicgreen;
     z-index: -1;
     right: 0;
-
   }
 
   &::after {
@@ -43,15 +42,14 @@
     background: $basicgreen;
     z-index: -1;
     left: 20px;
-
   }
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     @include title;
     margin-left: 5px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 0;
   }
 }
@@ -100,10 +98,6 @@
       align-items: center;
     }
 
-    &:last-child {
-      border-bottom: none;
-    }
-
     @media (min-width: $desktop-width) {
       padding-bottom: 15px;
       display: flex;
@@ -119,7 +113,7 @@
   .additional-goods__item-title {
     font-size: 16px;
     line-height: 16px;
-    text-transform: $uppercase;
+    text-transform: uppercase;
     color: $blacktwo;
     font-weight: 400;
 
@@ -153,15 +147,15 @@
   }
 
   .additional-goods__item-price {
-    text-transform: $uppercase;
+    text-transform: uppercase;
     text-align: right;
     font-family: "Arial", "Times New Roman", sans-serif;
 
-    @media (min-width:$tablet-width) {
+    @media (min-width: $tablet-width) {
       padding-right: 37px;
     }
 
-    @media (min-width:$desktop-width) {
+    @media (min-width: $desktop-width) {
       padding-right: 0;
     }
   }

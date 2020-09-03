@@ -3,12 +3,6 @@
   line-height: 36px;
 }
 
-@mixin pseudo {
-  display: $display;
-  position: $pos;
-  content: $content;
-}
-
 @mixin list {
   list-style: none;
   margin: 0;

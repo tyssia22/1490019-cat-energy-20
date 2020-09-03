@@ -5,9 +5,10 @@
     background-color: $white;
     position: relative;
   }
+
   @media (min-width: $desktop-width) {
     background-color: $grey;
-      }
+  }
 }
 
 .example__wrapper {
@@ -191,7 +192,6 @@
 
     &--after {
       clip: rect(auto, auto, auto, 345px);
-
     }
 
     &--before {
@@ -346,4 +346,3 @@
     padding-left: 63px;
   }
 }
-
